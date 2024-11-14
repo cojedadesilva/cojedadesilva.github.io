@@ -1,16 +1,77 @@
 body {
     font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: url('path/to/background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
     max-width: 800px;
     margin: auto;
-    padding: 20px;
 }
-header, section {
-    margin-bottom: 20px;
+
+#about, #projects {
+    text-align: center;
 }
-h1, h2 {
-    color: #333;
-}
-a {
-    color: #007acc;
+
+.project-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
     text-decoration: none;
+    color: #007acc;
+    background-color: #e6f2ff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.project-links a:hover {
+    background-color: #b3d1ff;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    margin: 20px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
 }
