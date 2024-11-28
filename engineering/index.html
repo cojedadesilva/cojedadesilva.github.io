@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Engineering projects by Carlos Ojeda de Silva – Carlos Ojeda de Silva Portfolio Website</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-274c3d255ff4b40ad85bc0e900837b3c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Carlos Ojeda de Silva Portfolio Website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../engineering/"> 
+<span class="menu-text">Engineering Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../coding/"> 
+<span class="menu-text">Math/Computer Science Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#hybrid-rocket" id="toc-hybrid-rocket" class="nav-link active" data-scroll-target="#hybrid-rocket">Hybrid Rocket</a></li>
+  <li><a href="#liquid-rocket-engine" id="toc-liquid-rocket-engine" class="nav-link" data-scroll-target="#liquid-rocket-engine">Liquid Rocket Engine</a></li>
+  <li><a href="#hybrid-rocket-1" id="toc-hybrid-rocket-1" class="nav-link" data-scroll-target="#hybrid-rocket-1">Hybrid Rocket</a></li>
+  <li><a href="#controlling-device-inputs-with-a-microcontroller" id="toc-controlling-device-inputs-with-a-microcontroller" class="nav-link" data-scroll-target="#controlling-device-inputs-with-a-microcontroller">Controlling device inputs with a microcontroller</a></li>
+  <li><a href="#avionics-for-rocket" id="toc-avionics-for-rocket" class="nav-link" data-scroll-target="#avionics-for-rocket">Avionics for rocket</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Engineering projects by Carlos Ojeda de Silva</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="hybrid-rocket" class="level2">
+<h2 class="anchored" data-anchor-id="hybrid-rocket">Hybrid Rocket</h2>
+<div class="panel">
+<button id="showMoreButton1" onclick="toggleText1()" style="position: relative; background-color: #2E5CA7; color: white; border: none; padding: 0; cursor: pointer; border-radius: 5px; width: 200px; height: 200px; overflow: hidden;">
+<img id="buttonImage1" src="../images/Hybridrocket4.jpg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;"> <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; font-weight: bold; background-color: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 3px;">Show More:</span>
+</button>
+<div id="hiddenText1" style="display: none; margin-top: 10px;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Hybridrocket4.jpg" class="img-fluid figure-img"></p>
+<figcaption>Rocket Launch</figcaption>
+</figure>
+</div>
+<p>While on Alamo Heights High School, I joined the rocketry program and worked in a project to design, build, and test a hybrid rocket. The goal was to build a hybrid rocket capable of reaching 50,000 ft while having a 5 lb payload and safely recovering it. This is not an easy task, but we were able to build a rocket and test it at White Sands Missile Range.</p>
+<p>The first step was to simulate the flight and make sure the general shape and size of the rocket would be able to meet our objectives, here is a picture of the simulation we ran on Google Sheets using Euler’s method in order to predict where the rocket would end up in (Disclaimer: this simulation was modified post flight to match flight data we got, mainly as a test of the efficacy of the simulation algorithm)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Hybridrocket2.png" class="img-fluid figure-img"></p>
+<figcaption>Flight Profile</figcaption>
+</figure>
+</div>
+<p>This algorithm was compared to the actual flight after we added specific values from the flight in order to calculate the efficiency of the engine (Isp). This next image has a yellow line representing the actual flight path of the rocket, and there is an overlapping blue line that is what we simulated. Using the specific angle the rocket went, how high it went, and how far it landed (crashed), we determined that the Isp was around 157 seconds. We also assumed constant wind speeds for this result, but we have checked that modifying these would have minimal impact (whithin reasonable range). Another issue the rocket had is that the tank was only half full (or half empty), meaning that we also had to account for this in these simulations post flight analysis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Hybridrocket1.png" class="img-fluid figure-img"></p>
+<figcaption>Simulation vs Actual data</figcaption>
+</figure>
+</div>
+<p>Although all of this simulation was really interesting, we can now talk about the subsystem I was mainly involved in: Recovery (I think this was spoiled before, but the rocket crashed). Altough the rocket crashed, it is unclear if it was the avionics or recovery that failed, but it is more likely it would have been the avionics since not even the nosecone was able to deploy, which should be directly liable on the avionics. All of this was analysed post flight and noted for the next year in the project, where they were able to get a working recovery system. At the end of the day, having a system you can’t fully test work first time is difficult. Here is a short overview of the recovery system:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Hybridrocket3.png" class="img-fluid figure-img"></p>
+<figcaption>Recovery system design</figcaption>
+</figure>
+</div>
+<p>This system consisted of a dual deployment using only 1 parachute. Although we only have 1 parachute, we can make it act like 2 different sizes by using a technique called reefing, where we tie down the parachute so it is closed when it is deployed. This helps since it acts like a smaller parachute and then we can cut this line using our custom designed and built line cutters to fully open them. For this, we tested the line cutters before flight, which we can see in the video below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="..\images/Hybridvid2.mp4" class="img-fluid" controls=""><a href="..\images/Hybridvid2.mp4">Video</a></video></p>
+<figcaption>Line cutter test</figcaption>
+</figure>
+</div>
+<p>Finally, this recovery system and the other components of the rocket were integrated, amking sure they all worked together in order to achieve the video shown, The rocket was 63kg dry mass and 95kg wet mass (with fuel and oxidizer), although designed to be 113kg: The rocket reached a total altitude over ground level of 18994 feet (5774 meters).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="..\images/Hybridvid1.mp4" class="img-fluid" controls=""><a href="..\images/Hybridvid1.mp4">Video</a></video></p>
+<figcaption>Rocket Flight</figcaption>
+</figure>
+</div>
+</div>
+<script>
+function toggleText1() {
+    var hiddenText = document.getElementById("hiddenText1");
+    var button = document.getElementById("showMoreButton1");
+    var buttonImage = document.getElementById("buttonImage1");
+    var buttonText = button.querySelector("span"); // Only target the text part of the button
+
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "block";
+        buttonImage.style.display = "none"; // Hide the image
+        buttonText.innerText = "Show Less";
+    } else {
+        hiddenText.style.display = "none";
+        buttonImage.style.display = "block"; // Show the image
+        buttonText.innerText = "Show More";
+    }
+}
+</script>
+</div>
+</section>
+<section id="liquid-rocket-engine" class="level2">
+<h2 class="anchored" data-anchor-id="liquid-rocket-engine">Liquid Rocket Engine</h2>
+<div class="panel">
+<button id="showMoreButton2" onclick="toggleText2()" style="position: relative; background-color: #2E5CA7; color: white; border: none; padding: 0; cursor: pointer; border-radius: 5px; width: 200px; height: 150px; overflow: hidden;">
+<img id="buttonImage2" src="../images/LRED1.png" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;"> <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; font-weight: bold; background-color: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 3px;">Show More:</span>
+</button>
+<div id="hiddenText2" style="display: none; margin-top: 10px;">
+<p>Liquid engines are generally considered to be the best ones for rocketry. This student runned project at HMC was tasked to test one. In this project, I mainly helped machine, create the electronics systems, and fix any unexpected flaws that arose as we continued to make the engine.</p>
+<p>First of all, thsi project has been going for 3 years, this means that the design was done while I was still in High School. For understanding purposes I will add pictures of this, but I wasn’t involved with this design:</p>
+<p><img src="..\images/LRED1.png" class="img-fluid"> <img src="..\images/LRED2.png" class="img-fluid"></p>
+<p>On the other hand, most of these parts were not machined when I joined. Here are some images of the parts I machined:</p>
+<p><strong>Outer Wall</strong></p>
+<div class="grid">
+<div class="g-col-6">
+<p><img src="..\images/LRED6.jpg" class="img-fluid"></p>
+</div>
+<div class="g-col-6">
+<p><img src="..\images/LRED5.jpg" class="img-fluid"></p>
+</div>
+</div>
+<p><strong>Oxidizer Cover</strong> <img src="..\images/LRED7.jpg" class="img-fluid"> I also helped in the machining process of the Exit seal and retaining plate, but I don’t have pictures of these.</p>
+<p><strong>First Testing Attempt</strong></p>
+<p>We took the system to Friends of Amateur Rocketry launch site (FAR) in order to test the thrust and flow rates through the engine. The computer systems in the test stand got overwhelmed from reading data and controlling the engine at the same time, which made the rocket engine unable to ignite. We are currently fixing these issues by having different computers for data collection and controlling. Here are some pictures of the setup we had:</p>
+<p><img src="..\images/LRED3.jpg" class="img-fluid"> <img src="..\images/LRED4.jpg" class="img-fluid"></p>
+</div>
+<script>
+function toggleText2() {
+    var hiddenText = document.getElementById("hiddenText2");
+    var button = document.getElementById("showMoreButton2");
+    var buttonImage = document.getElementById("buttonImage2");
+    var buttonText = button.querySelector("span"); // Only target the text part of the button
+
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "block";
+        buttonImage.style.display = "none"; // Hide the image
+        buttonText.innerText = "Show Less";
+    } else {
+        hiddenText.style.display = "none";
+        buttonImage.style.display = "block"; // Show the image
+        buttonText.innerText = "Show More";
+    }
+}
+</script>
+</div>
+</section>
+<section id="hybrid-rocket-1" class="level2">
+<h2 class="anchored" data-anchor-id="hybrid-rocket-1">Hybrid Rocket</h2>
+<div class="panel">
+<button id="showMoreButton3" onclick="toggleText3()" style="position: relative; background-color: #2E5CA7; color: white; border: none; padding: 0; cursor: pointer; border-radius: 5px; width: 200px; height: 150px; overflow: hidden;">
+<img id="buttonImage3" src="../images/HRE3.jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;"> <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; font-weight: bold; background-color: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 3px;">Show More:</span>
+</button>
+<div id="hiddenText3" style="display: none; margin-top: 10px;">
+<p>Currently designing and buiding a small hybrid rocket engine that uses a 3D-printed fuel grain and Nitrous Oxide as a propellant. Using a hybrid engine isn’t as efficeint as solid or liquid, but it is safer to handle and not as complicated as a liquid engine. This would allow the college to start building rocket engines of different sizes and specifications that could be used for multiple projects.</p>
+<p>Here are some pictures of the engine itself, we are still working in plumbing and possibly modifying the injector to be more customizable.</p>
+<p><img src="..\images/HRE1.jpeg" class="img-fluid"> <img src="..\images/HRE3.jpeg" class="img-fluid"></p>
+<p>Here is a picture of the injector, we are currently planning to change having 4 holes for a threaded hole that we can chnage the injector for different tests. This would help make a testing matrix that would allow us to find a simple and efficient design we can upscale.</p>
+<p><img src="..\images/HRE2.jpeg" class="img-fluid"></p>
+</div>
+<script>
+function toggleText3() {
+    var hiddenText = document.getElementById("hiddenText3");
+    var button = document.getElementById("showMoreButton3");
+    var buttonImage = document.getElementById("buttonImage3");
+    var buttonText = button.querySelector("span"); // Only target the text part of the button
+
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "block";
+        buttonImage.style.display = "none"; // Hide the image
+        buttonText.innerText = "Show Less";
+    } else {
+        hiddenText.style.display = "none";
+        buttonImage.style.display = "block"; // Show the image
+        buttonText.innerText = "Show More";
+    }
+}
+</script>
+</div>
+</section>
+<section id="controlling-device-inputs-with-a-microcontroller" class="level2">
+<h2 class="anchored" data-anchor-id="controlling-device-inputs-with-a-microcontroller">Controlling device inputs with a microcontroller</h2>
+<div class="panel">
+<button id="showMoreButton4" onclick="toggleText4()" style="position: relative; background-color: #2E5CA7; color: white; border: none; padding: 0; cursor: pointer; border-radius: 5px; width: 200px; height: 150px; overflow: hidden;">
+<img id="buttonImage4" src="../images/Press2.png" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;"> <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; font-weight: bold; background-color: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 3px;">Show More:</span>
+</button>
+<div id="hiddenText4" style="display: none; margin-top: 10px;">
+<p>Have you ever wondered if it is possible to make a non-mechanical device that presses keys/buttons for you? Well, this is a question I had some time ago, which inspired me to test it on a video game controller, and eventually, a keyboard. The system here connects the circuit in a controller to some transistors using nails. The transistors can be switched on and off with the use of a microcontroller, which in this case is an Arduino Uno. The system done with the controller worked well and was able to be programmed. The project then started using a keyboard instead of a controller, which was proven to work. I was limited by the microcontroller I had available because the keyboard circuit had more terminals than the Arduino, meaning that not all letters and symbols could be simulated.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Press1.png" class="img-fluid figure-img"></p>
+<figcaption>Diagram showing Arduino connection to controller</figcaption>
+</figure>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<p><strong>Original circuit of a computer keyboard.</strong> This circuit worked in an interesting way, where terminals were either type A or B (8A and 18B in total). A and B are able to combine to create different key presses, adding to 144 different possible keys (including letters, symbols, turning your computer off, and more). One interesting hidden key printed the current date and time in just one press. The explanation of how this works explains why when you press “a” and “d” at the same time it will no longer detect when you press “c” (this may vary from keyboard to keyboard), but it does detect when you press “h”. This is because “a” and ”d”, already include the combinations which “c” needs to be detected by the computer (“a” may have the same A terminal than “c” while “d” has the same B terminal as “c”, meaning that pressing “c” doesn’t connect anything that wasn’t connected before). <img src="..\images/Press3.png" class="img-fluid"></p>
+</div>
+<div class="g-col-6">
+<p><strong>Connecting wires to keyboard PCB</strong> Here is the set up used to connect the keyboard circuit. Note that there are a lot of wires coming out of this device when compared to the controller. In this setup, red wires are A type while black wires are B type. <img src="..\images/Press4.png" class="img-fluid"> <br> <strong>Connecting wires to controller PCB</strong> Here is a closer look at the connections made with nails to the controller circuit. These connections only worked because the PCB is single layered. Overall these connections were effective for connecting the plates without the use of soldering since soldering frequently broke off the flat surface. <img src="..\images/Press2.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<script>
+function toggleText4() {
+    var hiddenText = document.getElementById("hiddenText4");
+    var button = document.getElementById("showMoreButton4");
+    var buttonImage = document.getElementById("buttonImage4");
+    var buttonText = button.querySelector("span"); // Only target the text part of the button
+
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "block";
+        buttonImage.style.display = "none"; // Hide the image
+        buttonText.innerText = "Show Less";
+    } else {
+        hiddenText.style.display = "none";
+        buttonImage.style.display = "block"; // Show the image
+        buttonText.innerText = "Show More";
+    }
+}
+</script>
+</div>
+</section>
+<section id="avionics-for-rocket" class="level2">
+<h2 class="anchored" data-anchor-id="avionics-for-rocket">Avionics for rocket</h2>
+<div class="panel">
+<button id="showMoreButton5" onclick="toggleText5()" style="position: relative; background-color: #2E5CA7; color: white; border: none; padding: 0; cursor: pointer; border-radius: 5px; width: 200px; height: 150px; overflow: hidden;">
+<img id="buttonImage5" src="../images/Avionics4.png" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;"> <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 16px; font-weight: bold; background-color: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 3px;">Show More:</span>
+</button>
+<div id="hiddenText5" style="display: none; margin-top: 10px;">
+<p>Although commercially available, rocket avionics have one main issue: lack of customization. Sometimes a specific rocket needs to collect different kinds of data and deploy stages based on different conditions other than time, acceleration, altitude, or other common triggers. This project focuses on making a cheap, customizable rocket avionics system that can be easily used and modified for different needs.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Avionics1.png" class="img-fluid figure-img"></p>
+<figcaption>Diagram describing data flow</figcaption>
+</figure>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<p><strong>Handheld receiver and Tracker:</strong> The red LED will blink faster the closer you are pointing to the direction of where the rocket is. <img src="..\images/Avionics5.png" class="img-fluid"></p>
+</div>
+<div class="g-col-6">
+<p><strong>Radio Modules</strong> These modules now have LoRa designed antennas, meaning that the gain is much better. These antennas should work at a range of 10 miles, but it is currently not tested. <img src="..\images/Avionics3.png" class="img-fluid"></p>
+</div>
+<div class="g-col-6">
+<p><strong>Onboard Computer</strong> The red LED is to see the signals that would activate the parachute deployment. The purpose of this board is to send data, save data, and receive deployment orders from the handheld receiver. <img src="..\images/Avionics4.png" class="img-fluid"></p>
+</div>
+<div class="g-col-6">
+<p><strong>How does the tracker work?</strong> The receiver will need 3 data points: GPS of rocket, GPS of itself, and Magnetometer data. This means that you can calculate the angle between where the rocket is and where the receiver is and check how closely it matches the magnetometer data, changing the blinking frequency. <img src="..\images/Avionics2.png" class="img-fluid"></p>
+</div>
+</div>
+<p><strong>Future development in the project:</strong> Although the project has gotten very good progress in data transmission, it is still missing to have everything soldered in a more permanent board. Most of the systems, other than the back and forth data transmission, have only been tested individually, this leaves the integration of these systems as another task. Currently, I am working in making a phone application that makes tracking easier.</p>
+</div>
+<script>
+function toggleText5() {
+    var hiddenText = document.getElementById("hiddenText5");
+    var button = document.getElementById("showMoreButton5");
+    var buttonImage = document.getElementById("buttonImage5");
+    var buttonText = button.querySelector("span"); // Only target the text part of the button
+
+    if (hiddenText.style.display === "none") {
+        hiddenText.style.display = "block";
+        buttonImage.style.display = "none"; // Hide the image
+        buttonText.innerText = "Show Less";
+    } else {
+        hiddenText.style.display = "none";
+        buttonImage.style.display = "block"; // Show the image
+        buttonText.innerText = "Show More";
+    }
+}
+</script>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
