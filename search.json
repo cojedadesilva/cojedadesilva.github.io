@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Carlos Ojeda is a Harvey Mudd Class of 2027 student who enjoys doing Engineering projetcs!\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "posts/blog.html",
+    "href": "posts/blog.html",
+    "title": "E155 Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "E155 Blog",
+    "section": "",
+    "text": "I am exited to take MicroP’s at HMC since I would like to learn how to use them to automate tasks that are too repetitive and annoying to do among other things.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello Quarto\n\n\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 29, 2025\n\n\nCarlos Ojeda\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "E155 Resources",
+    "section": "",
+    "text": "College Course Website: https://hmc-e155.github.io/"
+  },
+  {
+    "objectID": "posts/first-post.html",
+    "href": "posts/first-post.html",
+    "title": "Hello Quarto",
+    "section": "",
+    "text": "I am exited to take MicroP’s at HMC since I would like to learn how to use them to automate tasks that are too repetitive and annoying to do among other things."
+  }
+]
