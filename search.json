@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "Carlos Ojeda is a Harvey Mudd Class of 2027 student who enjoys doing Engineering projetcs!\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "posts/blog.html",
+    "href": "posts/blog.html",
+    "title": "E155 Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "E155 Blog",
+    "section": "",
+    "text": "Hello Quarto\n\n\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 29, 2025\n\n\nCarlos Ojeda\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "E155 Resources",
+    "section": "",
+    "text": "College Course Website: https://hmc-e155.github.io/"
+  },
+  {
+    "objectID": "posts/first-post.html",
+    "href": "posts/first-post.html",
+    "title": "Hello Quarto",
+    "section": "",
+    "text": "I am exited to take MicroP’s at HMC since I would like to learn how to use them to automate tasks that are too repetitive and annoying to do among other things."
+  },
+  {
+    "objectID": "labs/lab1/lab1.html",
+    "href": "labs/lab1/lab1.html",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "",
+    "text": "During this lab, we are tasked to make a 2.4Hz square wave, an and gate operation, a xor gate operation and a translator from binary introduced from switches into a hex number in a 7 segment display. These different tasks explore different types of skill when working with FPGA’s.\nThis Lab took around 12 hours to finish.\n\nPCB soldering and circuits\nFirst, we have to make sure the FPGA setup will be adecuate for the E155 course, where we need to include all the components and verify the connections and board all work propperly. This helped me develop skills mainly in surface mounted devices, since it is a type of soldering I am not very familiar.\nIMAGE OF BOARD\nAfter getting the board set up, we started to work into making the circuit for the following parts of the lab. This required some amount of calculations and design choices that are gone more in depth later in this page.\n\n\n\nBlock Diagram\n\n\n\n\n\nCircuit Diagram\n\n\nIt is also important to note that we had to program which pins are which in the FPGA setup:\n\n\n\nFPGA pin setup\n\n\n\n\nand/xor gate operations\nThis can be easily done in verilog by defining the output (an LED in this case) to be the “and” or “xor” operation of the desired inputs. This can be done as easily as:\nassign led00 = s[0] ^ s[1]; //xor\nassign led10 = s[2] & s[3]; //and\n\n\n2.4 Hz Timing\nIn order to get a frequency as close as possible to 2.4Hz, we need to make a counter that resets 2.4 times per second, this can be achieved by making a large register counter (32 bits in my case) and considering that we have a clock speed of 48MHz and a desired frequency of 2.4Hz, we can do the following math:\n\\[\n2.4 = \\frac{f*c}{2^(N-1)}\n\\] Where \\[\nN = 32\n\\] \\[\nf = 48,000,000\n\\] \\[\nc = 215\n\\]\nThe value 215 was chosen to give us the closest frequency to the desired 2.4 Hz. This would result in a code that looks like this:\n    always_ff @(posedge int_osc)\n        begin\n            counter &lt;= counter + 215; //107 * 48,000,000 ~= 2.4 * 2^30, so a 2.4Hz square wave\n        end\n  assign fpga_blink_out = counter[31];\nAfter getting this code working, we tested the signal generated using an oscilloscope and verified it was at 2.4Hz.\n\n\n\nOscilloscope trace\n\n\n\n\n7 segment display\nTo make the 7 segment display to work by being controlled by the UPduino board, we first need to consider that the 7 segment display we are using (HSDP-511A) works by grounding the pins to turn on the desired segment. This means that whenever we are making the logic on which segments turn on and off, we have to consider that 0 is on and 1 is off. The next thing to decide was the resistance added to each pin. Adding an individual resistor per pin allows us to have a consistent brightness in every segment and segment combination. This resistance value was chosen to make current through each segment under 5mA, which is not even close to the maximum recomended, but it should extend its working life. This was done assuming a voltage drop of 2.1 volts as seen in the datasheet to be:\n\\[\n0.005 &gt; \\frac{5-2.1}{R}\n\\] \\[\nR &gt; 580\n\\]\nIn this case, we chose to use 1k resistors since they were visible and available.\n\n\n\nTest with 9 in binary (1001) showing the right output\n\n\nFrom this expected output image, we can see how the XOR LED is on and the AND led is off. This is expected since both modules work at the same time.\n\n\nAI Prototype\nUsing ChatGPT, we inputted the folowing prompt:\nWrite SystemVerilog HDL to leverage the internal high speed oscillator in the Lattice UP5K FPGA and blink an LED at 2 Hz. Take full advantage of SystemVerilog syntax, for example, using logic instead of wire and reg.\nfrom which we got this code:\nmodule led_blinker_2hz (\n    output logic led\n);\n\n    // High-speed internal oscillator output\n    logic clk_48mhz;\n\n    // Instantiate the HFOSC (internal high-frequency oscillator)\n    SB_HFOSC #(\n        .CLKHF_DIV(\"0b00\") // Divide by 1 → 48 MHz\n    ) hfosc_inst (\n        .CLKHFEN(1'b1),    // Enable the HF oscillator\n        .CLKHFPU(1'b1),    // Power up the oscillator\n        .CLKHF(clk_48mhz)\n    );\n\n    // Parameters for 2 Hz blinking (toggle every 0.5s)\n    localparam int unsigned MAX_COUNT = 24_000_000 - 1;\n\n    // Counter and LED register\n    logic [24:0] counter = 0;\n\n    always_ff @(posedge clk_48mhz) begin\n        if (counter == MAX_COUNT) begin\n            counter &lt;= 0;\n            led &lt;= ~led;  // Toggle the LED\n        end else begin\n            counter &lt;= counter + 1;\n        end\n    end\n\nendmodule\nAfter testing this code, we realized that it didn’t work, we copied the error message and tried the new code.\nmodule led_blinker_2hz (\n    output logic led\n);\n\n    logic clk;\n\n    // Instantiate the OSC block\n    osc_0 osc_inst (\n        .clkout(clk)\n        // Add enable or other ports if necessary\n    );\n\n    // Blink at 2 Hz (assuming 48 MHz oscillator)\n    localparam int unsigned MAX_COUNT = 24_000_000 - 1;\n    logic [24:0] counter = 0;\n\n    always_ff @(posedge clk) begin\n        if (counter == MAX_COUNT) begin\n            counter &lt;= 0;\n            led &lt;= ~led;\n        end else begin\n            counter &lt;= counter + 1;\n        end\n    end\n\nendmodule\nAfter running this, it would still not work, This could be that mainly the system we are using and the way libraries have to be called are extremely specific and difficult for a general LLM model like ChatGPT to do without messing up.\nIf I would continue trying to fix the errors with chat and think about possible promts I could add to induce debugging, it is defenitely possible to get a working code.\n\n\nLab 1 resources:\nCode: https://github.com/cojedadesilva/E155lab1"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#lab-1-fpga-and-mcu-setup-and-testing",
+    "href": "labs/lab1/lab1.html#lab-1-fpga-and-mcu-setup-and-testing",
+    "title": "E155 Portfolio",
+    "section": "",
+    "text": "During this lab, we are tasked to make a 2.4Hz square wave, an and gate operation, a xor gate operation and a translator from binary introduced from switches into a hex number in a 7 segment display. These different tasks explore different types of skill when working with FPGA’s.\nThis Lab took around 12 hours to finish.\n\n\nFirst, we have to make sure the FPGA setup will be adecuate for the E155 course, where we need to include all the components and verify the connections and board all work propperly. This helped me develop skills mainly in surface mounted devices, since it is a type of soldering I am not very familiar.\nIMAGE OF BOARD\n\n\n\nThis can be easily done in verilog by defining the output (an LED in this case) to be the “and” or “xor” operation of the desired inputs. This can be done as easily as:\nPICTURE OF THIS PART OF THE CODE\n\n\n\nIn order to get a frequency as close as possible to 2.4Hz, we need to make a counter that resets 2.4 times per second, this can be achieved by making a large register counter (32 bits in my case) and considering that we have a clock speed of 48MHz and a desired frequency of 2.4Hz, we can do the following math:\n\\[\n2.4 = \\frac{f*c}{2^(N-1)}\n\\] Where \\[\nN = 32\n\\] \\[\nf = 48,000,000\n\\] \\[\nc = 215\n\\]\nThe value 215 was chosen to give us the closest frequency to the desired 2.4 Hz. This would result in a code that looks like this:\nIMAGE OF THE CODE\nAfter getting this code working, we tested the signal generated using an oscilloscope and verified it was at 2.4Hz.\nIMAGE OF OSCILLOSCOPE TRACE\n\n\n\nTo make the 7 segment display to work by being controlled by the UPduino board, we first need to consider that the 7 segment display we are using (HSDP-511A) works by grounding the pins to turn on the desired segment. This means that whenever we are making the logic on which segments turn on and off, we have to consider that 0 is on and 1 is off. The next thing to decide was the resistance added to each pin. Adding an individual resistor per pin allows us to have a consistent brightness in every segment and segment combination. This resistance value was chosen to make current through each segment under 5mA, which is not even close to the maximum recomended, but it should extend its working life. This was done assuming a voltage drop of 2.1 volts as seen in the datasheet to be:\n\\[\n0.005 &gt; \\frac{5-2.1}{R}\n\\] \\[\nR &gt; 580\n\\]\nIn this case, we chose to use 1k resistors since they were visible and available.\nIMAGE OF TEST CASE\n```verilog module and_gate ( input wire a, input wire b, output wire y ); assign y = a & b; endmodule"
+  }
+]
